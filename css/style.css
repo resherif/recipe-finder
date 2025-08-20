@@ -13,18 +13,52 @@ body {
 nav {
   width: 100% !important;
   background-color: #6c63ff;
-  padding: 20px;
+  padding: 15px 0;
 }
 
 nav .container {
-  width: 99%;
-  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin:0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 @media (max-width: 768px) {
+.container
+{
+  width: 95%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+nav .container div span a {
+        font-size: 24px;
+    }
+    nav .container form {
+        width: 100%; /* Full width for form */
+        justify-content: center;
+    }
+    nav .container form input {
+        width: 100%; /* Full width input */
+        max-width: 300px;
+    }
+    nav .container form button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    nav .container .log {
+        margin-top: 10px;
+    }
+    nav .container .log span a {
+        font-size: 14px;
+    }
+
+    nav .container .log i {
+        font-size: 14px;
+    }
   .recipe-card img {
     height: 150px;
   }
@@ -34,10 +68,34 @@ nav .container {
   }
 }
 @media (max-width: 480px) {
+  nav {
+        padding: 10px 0;
+    }
   .container {
-    width: 100% !important;
-    padding: 5px;
+    width: 95% !important;
+    gap:10px;
   }
+  nav .container div span a {
+        font-size: 20px;
+    }
+    
+    nav .container form input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    nav .container form button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    nav .container .log span a {
+        font-size: 13px;
+    }
+
+    nav .container .log i {
+        font-size: 13px;
+    }
   .recipe-card {
     grid-template-columns: 1fr;
   }
@@ -49,23 +107,28 @@ nav .container {
 nav .container div span a {
   text-decoration: none;
   color: #fff;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
-
+nav .container form{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 nav .container form input {
   padding: 8px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  margin-right: 10px;
+  font-size: 14px;
+  width: 200px;
 }
 
 nav .container form button {
   border-radius: 8px;
   background-color: #8c82ff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 8px 18px;
+  padding: 8px 15px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -79,16 +142,16 @@ nav .container form button:hover {
 nav .container .log {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 nav .container .log i {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
 }
 
 nav .container .log span a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
@@ -282,4 +345,5 @@ nav .container .log span a {
   .details-content img {
     max-width: 200px;
   }
-}
+} 
+
